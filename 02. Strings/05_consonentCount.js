@@ -5,6 +5,7 @@
     1. Create an array of vowels
     2. Iterate through the string
     3. If the current character is not a vowel, increment the count
+    4. Return the count
 */
 
 // --- Solution ---
@@ -20,6 +21,8 @@ function consonentCount(string) {
       count++;
     }
   }
+
+  // Step 4: Return the count
   return count;
 }
 
