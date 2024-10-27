@@ -33,6 +33,7 @@ console.log("Iron,Man".split(",")); // Splits by comma -> ["Iron", "Man"]
 // Replace substring
 console.log(nickname.replace("Iron", "Super")); // Replaces "Iron" with "Super" -> "Superman"
 console.log("foo foo".replace("foo", "bar")); // Only replaces the first match -> "bar foo"
+console.log("foo foo".replaceAll("foo", "bar")); // Replaces all matches -> "bar bar"
 
 // Repeat string
 console.log(firstname.repeat(3)); // Repeats the string 3 times -> "TonyTonyTony"
@@ -57,7 +58,7 @@ console.log(nickname.lastIndexOf("man", 6)); // Last "man" within first 6 charac
 const sampleText = "Hello, World!";
 console.log(sampleText.slice(0, 5)); // Extracts substring from index 0 to 5 -> "Hello"
 console.log(sampleText.substring(7, 12)); // Extracts substring from index 7 to 12 -> "World"
-console.log(sampleText.substr(7, 5)); // Extracts 5 characters from index 7 -> "World"
+console.log(sampleText.substr(7, 5)); // Extracts 5 characters from index 7 -> "World" (deprecated)
 
 // --- Comparing Two Strings ---
 console.log(firstname.localeCompare(lastname)); // Lexicographic comparison -> 1 ("Tony" > "Stark")

@@ -8,15 +8,15 @@ function primeNumber(number) {
   return number > 1; // Constant ops - k
 }
 
-// -----------------------------------------------------------------------
-
 /* 
+--- Time Complexity ---
 
-Time Complexity
+  1st iteration: from i = 2 to n
+  We can say that it goes from i = 0 to n
 
-1st iteration: from i = 2 to n
-We can say that it goes from i = 0 to n
+  Then Time Complexity = O(n) 
 
-Then time complexity should be O(n) 
+--- Space Complexity ---
 
+  Constant space is occupied, Hence Space Complexity = O(1)
 */
