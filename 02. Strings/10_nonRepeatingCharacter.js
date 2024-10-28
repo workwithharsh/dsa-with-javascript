@@ -1,15 +1,16 @@
-/* 
-    Problem: Count the occurrence of each character in a string.
+/*
+    Problem: Write a function to find the first non-repeating character in a string.
 
     Algorithm:
     1. Split the string into an array of characters
     2. Reduce the array into an object
     3. Count the occurrence of each character, skip spaces
-    4. Return the count
+    4. Find the key-value pair whose value is 1
+    5. Conditionally return the key
 */
 
 // --- Solution ---
-function occurrenceCount(string) {
+function nonRepeatingCharacter(string) {
   // Step 1: Split the string into an array of characters
   const characters = string.split("");
 
@@ -23,20 +24,19 @@ function occurrenceCount(string) {
     return accumulator;
   }, {});
 
-  // Step 4: Return the count
-  return count;
+  // Step 4: Find the key-value pair whose value is 1
+  const result = Object.entries(count).find(([key, value]) => value === 1);
+
+  // Step 5: Conditionally return the key
+  return result ? result[0] : null;
 }
 
 // --- Test cases ---
-console.log(occurrenceCount("hello hello hello")); // Expected output: { h: 3, e: 3, l: 6, o: 3, ' ': 2 }
-console.log(occurrenceCount("aaabbccc")); // Expected output: { a: 3, b: 2, c: 3 }
-console.log(occurrenceCount("")); // Expected output: {}
+console.log(nonRepeatingCharacter("hello harsh"));
+console.log(nonRepeatingCharacter("harshharsh"));
+console.log(nonRepeatingCharacter(""));
 
 /*
---- Notes ---
-    1. The reduce() method executes a reducer function (callback) on each element of the array, 
-       in order, passing in the return value from the calculation on the preceding element.
-
 --- Complexity Analysis ---
     Time Complexity: O(n)
     Space Complexity: O(n)
