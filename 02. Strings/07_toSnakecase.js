@@ -9,7 +9,7 @@
 */
 
 // --- Solution ---
-function convertToSnakeCase(string) {
+function toSnakeCase(string) {
   let result = "";
 
   // Step 1: Iterate through the string

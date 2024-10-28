@@ -36,7 +36,7 @@ console.log(trimString("     This is a sample string.     ")); // Expected outpu
 
 /*
 --- Notes ---
-    Two Pointers: We can use two pointers techniques to trace both ends of the strings, aarays, etc.
+    Two Pointers: We can use two pointers technique to trace both ends of the strings, aarays, etc.
     
 --- Complexity Analysis ---
     Time Complexity: O(n)
